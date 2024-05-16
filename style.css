@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('./img/dessert.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    font-family: 'Rye';
+    font-size: 32px;
+}
+h1 {
+    color: rgb(240, 206, 56);
+    font-size: 80px;
+}
+.description p {
+    color: rgb(240, 206, 56);
+}
+canvas {
+    background-color: black;
+    display: block;
+}
+.start {
+    width: 80%;
+    height: 60%;
+    max-height: 480px;
+    max-width: 800px;
+    background-image: url('./img/9_intro_outro_screens/start/startscreen_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+.start_game {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 30px 30px;
+    border-radius: 16px;
+}
+.start_game:hover {
+    cursor: pointer;
+    background-color: rgba(240, 206, 56, 0.5);
+}
+.start_game p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.start_game img {
+    height: 30px;
+}
+.links {
+    height: 40px;
+    display: flex;
+    gap: 15px;
+    margin: 30px 30px;
+}
+.links img {
+    height: 30px;
+    border-radius: 16px;
+}
+.links img:hover {
+    cursor: pointer;
+    background-color: rgba(240, 206, 56, 0.5);
+}
+.imprint p {
+    font-size: 16px;
+}
+.back_to_start {
+    width: 95%;
+    position: sticky;
+    top: 20px;
+    display: flex;
+    justify-content: end;
+}
+.back_to_start img {
+    border-radius: 16px;
+    height: 30px;
+}
+.back_to_start img:hover {
+    cursor: pointer;
+    background-color: rgba(240, 206, 56, 0.5);
+}
+.how_to_play_div, .imprint_div {
+    width: 70%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.how_to_play_div p {
+    margin-block-start: 0;
+}
+.how_to_play_div h3 {
+    margin-block-start: 0;
+}
+.you_win, .you_lost {
+    width: 95%;
+    height: 95%;
+}
+.win, .lost {
+    width: 95%;
+    height: 95%;
+}
+.repeat {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.play_buttons_div {
+    max-width: 720px;
+    max-height: 90px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+.margin_twenty {
+    margin: 20px;
+}
+.panel img {
+    margin: 0px 10px;
+    height: 50px;
+    border-radius: 50%;
+}
+.panel img:hover {
+    background-color: rgba(240, 206, 56, 0.5);
+    cursor: pointer;
+}
+.change_to_landscape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+.sound {
+    height: 30px;
+    position: relative;
+    top: 60px;
+}
+
+/* Responsive --------------------------------- */
+@media (max-width: 580px) {
+    h2 {
+        display: none;
+    }
+    .start_game {
+        margin: 15px 15px;
+        font-size: 12px;
+    }
+    .links {
+        margin: 15px 15px;
+    }
+    .how_to_play_div, .imprint_div {
+        width: 90%;
+    }
+}
+@media (max-width: 800px) {
+    p {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 890px) {
+    canvas {
+        width: 100%;
+    }
+    h1 {
+        display: none;
+    }
+    .description p {
+        display: none;
+    }
+    .start {
+        width: 100%;
+        height: 100%;
+    }
+    .welcome {
+        display: none;
+    }
+    .sound {
+        position: fixed;
+        height: 30px;
+        top: 35px;
+    }
+}
+@media only screen and (max-height: 480px) {
+    canvas {
+        height: 100%;
+    }
+    h1 {
+        display: none;
+    }
+    .description {
+        display: none;
+    }
+    .start {
+        background-size: cover;
+    }
+}
+.d_none {
+    display: none;
+}
