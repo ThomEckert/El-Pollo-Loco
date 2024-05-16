@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * @return {void}
    */
   function handleTouch(event, key) {
+    event.preventDefault();
     if (event.type === "touchstart") {
       keyboard[key] = true;
     } else if (event.type === "touchend") {
