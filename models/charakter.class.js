@@ -83,7 +83,7 @@ class Character extends MovableObject {
   ];
 
   /**
-   * A description of the entire function.
+   * Constructor for initializing an object with various states' images, applying gravity, and starting animation.
    *
    * @return {void} This function does not return anything.
    */
@@ -100,7 +100,9 @@ class Character extends MovableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Simulates pressing the left key on the keyboard, indicating the character is moving left,
+   * and sets a timeout to release the key after a delay. This method is typically used to simulate
+   * the character's movement when they are hurt or need to perform a quick dodge or retreat.
    *
    * @return {void} This function does not return anything.
    */

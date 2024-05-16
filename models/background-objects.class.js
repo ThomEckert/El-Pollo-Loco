@@ -3,7 +3,7 @@ class BackgroundObjects extends MovableObject {
   height = 480;
 
   /**
-   * A description of the entire function.
+   * Constructor for initializing an object with a specific image and position.
    *
    * @param {type} imagePath - description of parameter
    * @param {type} x - description of parameter

@@ -10,7 +10,7 @@ class Bottle extends CollectableObjects {
   };
 
   /**
-   * A description of the entire function.
+   * Constructor for initializing a salsa bottle object with a specific image and random positions.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value

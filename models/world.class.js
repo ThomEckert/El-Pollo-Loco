@@ -83,7 +83,6 @@ class World {
 
   /**
    * A function that plays the game music based on certain conditions.
-   *
    */
   playGameMusic() {
     setStoppableInterval(() => {
@@ -105,7 +104,7 @@ class World {
   }
 
   /**
-   * A description of the entire function.
+   * Handles the game win scenario.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
@@ -119,8 +118,7 @@ class World {
   }
 
   /**
-   * A description of the entire function.
-   *
+   * Displays the win screen by hiding certain elements and showing others.
    */
   showYouWin() {
     let add = ["canvas", "title", "playButtons", "playDescription"];
@@ -136,8 +134,7 @@ class World {
   }
 
   /**
-   * A description of the entire function.
-   *
+   * Handles the game loss scenario.
    */
   youLose() {
     this.end_sound.pause();
@@ -149,7 +146,6 @@ class World {
 
   /**
    * A function to display the 'youLost' element by removing the 'd_none' class and hiding other elements.
-   *
    */
   showYouLose() {
     let add = ["canvas", "title", "playButtons", "playDescription"];
@@ -165,7 +161,7 @@ class World {
   }
 
   /**
-   * A description of the entire function.
+   * Sets the world property of the character to the current instance (`this`).
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
@@ -313,7 +309,6 @@ class World {
   /**
    * Loops through the bottles in the level and checks for collision with the character.
    * If a collision is detected, increments the bottleBar amount, sets the amount, removes the bottle from the level, and plays a sound.
-   *
    */
   checkCollectBottle() {
     this.level.bottles.forEach((bottle) => {
@@ -354,13 +349,12 @@ class World {
   }
 
   /**
-   * A description of the entire function.
+   * Adds an array of objects to a map using the `addToMap` method.
    *
    * @param {array} objects - array of objects to add to the map
    * @return {void}
    */
   addObjectsToMap(objects) {
-    // o = objects
     objects.forEach((o) => {
       this.addToMap(o);
     });
@@ -373,7 +367,6 @@ class World {
    * @return {type} description of return value
    */
   addToMap(mo) {
-    // mo = movableObject
     if (mo.otherDirection) {
       this.flipImage(mo);
     }

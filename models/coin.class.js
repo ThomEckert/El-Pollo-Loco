@@ -4,8 +4,7 @@ class Coin extends CollectableObjects {
   y = 375;
 
   /**
-   * A description of the entire function.
-   *
+   * Constructor for initializing an object with a specific icon and random positions.
    */
   constructor() {
     super().loadImage("./img/7_statusbars/3_icons/icon_coin.png");

@@ -11,7 +11,6 @@ class CoinBar extends StatusBar {
 
   /**
    * Constructor function to initialize the object with default values and load images.
-   *
    */
   constructor() {
     super();

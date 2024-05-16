@@ -8,7 +8,7 @@ class Level {
   level_end_x = 719 * 3;
 
   /**
-   * A description of the entire function.
+   * Constructor for initializing a game scene with various elements.
    *
    * @param {type} enemies - description of parameter
    * @param {type} endboss - description of parameter

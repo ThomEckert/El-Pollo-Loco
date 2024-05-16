@@ -39,7 +39,6 @@ class ThrowableObject extends MovableObject {
 
   /**
    * A method that simulates throwing a bottle.
-   *
    */
   throw() {
     this.isThrowBottle = true;
@@ -55,7 +54,7 @@ class ThrowableObject extends MovableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Animates the object based on its position and conditions.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
@@ -73,7 +72,6 @@ class ThrowableObject extends MovableObject {
   /**
    * Explodes the throwable object by playing the splash animation, stopping its movement,
    * and removing it from the world after a brief delay.
-   *
    */
   explode() {
     this.playAnimation(this.IMAGES_SPLASH);

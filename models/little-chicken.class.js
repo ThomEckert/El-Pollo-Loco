@@ -14,8 +14,10 @@ class LittleChicken extends MovableObject {
   sounds = [this.splash_sound];
 
   /**
-   * A description of the entire function.
+   * Constructor for initializing an object with walking and dead images, random positions, and speeds.
    *
+   * @param {type} id - description of parameter
+   * @return {type} description of return value
    */
   constructor(id) {
     super().loadImage(this.IMAGES_WALKING[0]);
@@ -29,8 +31,7 @@ class LittleChicken extends MovableObject {
   }
 
   /**
-   * A description of the entire function.
-   *
+   * Kills the chicken and plays a splash sound effect.
    */
   killChickn() {
     super.killChickn();
@@ -38,8 +39,7 @@ class LittleChicken extends MovableObject {
   }
 
   /**
-   * A description of the entire function.
-   *
+   * Animates the object by moving it left and changing animations based on its state.
    */
   animate() {
     setStoppableInterval(() => {

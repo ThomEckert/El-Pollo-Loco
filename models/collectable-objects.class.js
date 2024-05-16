@@ -7,8 +7,7 @@ class CollectableObjects extends DrawableObject {
   };
 
   /**
-   * A description of the entire function.
-   *
+   * Default constructor for a class extending another class.
    */
   constructor() {
     super();

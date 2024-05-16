@@ -33,7 +33,6 @@ class MovableObject extends DrawableObject {
 
   /**
    * Decreases the energy by 5. If energy is less than 0, sets energy to 0. Otherwise, updates lastHit with the current time.
-   *
    */
   hit() {
     this.energy -= 5;
@@ -45,8 +44,7 @@ class MovableObject extends DrawableObject {
   }
 
   /**
-   * A description of the entire function.
-   *
+   * Kills the chicken by setting its energy to zero.
    */
   killChickn() {
     this.energy = 0;
@@ -63,7 +61,7 @@ class MovableObject extends DrawableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Checks if the entity is dead based on its energy level.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
@@ -73,7 +71,7 @@ class MovableObject extends DrawableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Determines if the object is above ground.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
@@ -99,7 +97,7 @@ class MovableObject extends DrawableObject {
       this.y + this.height - this.offset.bottom > obj.y + obj.offset.top && // T -> B
       this.x + this.offset.left < obj.x + obj.width - obj.offset.right && // L -> R
       this.y + this.offset.top < obj.y + obj.height - obj.offset.bottom // B -> T
-    ); 
+    );
   }
 
   /**
@@ -111,7 +109,7 @@ class MovableObject extends DrawableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Moves the object to the left by its speed.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
@@ -133,7 +131,7 @@ class MovableObject extends DrawableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Initiates a jump action by setting the vertical speed.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value

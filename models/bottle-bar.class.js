@@ -11,7 +11,6 @@ class BottleBar extends StatusBar {
 
   /**
    * Constructor function to initialize the BottleBar object with default values and load images.
-   *
    */
   constructor() {
     super();
@@ -24,7 +23,7 @@ class BottleBar extends StatusBar {
   }
 
   /**
-   * A description of the entire function.
+   * Resolves the image index based on the amount.
    *
    * @param {type} paramName - description of parameter
    * @return {type} description of return value
