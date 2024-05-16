@@ -160,6 +160,25 @@ class Character extends MovableObject {
    */
   moveCharacter() {
     this.walking_sound.pause();
+    this.endOfTheWorld();
+    this.onlyFlyingIsMoreBeautiful();
+    this.willLetTheWorldBurn();
+    this.world.camera_x = -this.x + 100;
+  }
+
+  /**
+   * A method that handles the scenario where the character throws a bottle.
+   */
+  willLetTheWorldBurn() {
+    if (this.world.keyboard.D) {
+      this.lastAnimationChangeTime = new Date().getTime();
+    }
+  }
+
+  /**
+   * A method that handles the end of the world scenario for the character.
+   */
+  endOfTheWorld() {
     if (this.world.keyboard.RIGHT && this.x < this.world.level.level_end_x) {
       this.moveRight();
       this.walking_sound.play();
@@ -171,14 +190,17 @@ class Character extends MovableObject {
       this.walking_sound.play();
       this.lastAnimationChangeTime = new Date().getTime();
     }
+  }
+
+  /**
+   * Checks if the character is flying and triggers the jump action if the space key is pressed and the character is not above ground.
+   * Plays the jump sound and updates the last animation change time.
+   */
+  onlyFlyingIsMoreBeautiful() {
     if (this.world.keyboard.SPACE && !this.isAboveGround()) {
       this.jump();
       this.jump_sound.play();
       this.lastAnimationChangeTime = new Date().getTime();
     }
-    if (this.world.keyboard.D) {
-      this.lastAnimationChangeTime = new Date().getTime();
-    }
-    this.world.camera_x = -this.x + 100;
   }
 }

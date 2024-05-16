@@ -83,7 +83,7 @@ class DrawableObject {
   }
 
   /**
-   * A description of the entire function.
+   * Draws an offset rectangle around certain types of objects.
    *
    * @param {CanvasRenderingContext2D} ctx - the 2D rendering context of the canvas
    * @return {void} no return value
