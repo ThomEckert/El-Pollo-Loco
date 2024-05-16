@@ -85,10 +85,10 @@ canvas {
 .back_to_start img {
     border-radius: 16px;
     height: 30px;
+    background-color: rgba(240, 206, 56, 0.5);
 }
 .back_to_start img:hover {
     cursor: pointer;
-    background-color: rgba(240, 206, 56, 0.5);
 }
 .how_to_play_div, .imprint_div {
     width: 70%;
