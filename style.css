@@ -114,6 +114,8 @@ canvas {
     position: absolute;
     top: 5px;
     right: 5px;
+    border-radius: 50%;
+    background-color: rgba(240, 206, 56, 0.5);
 }
 .play_buttons_div {
     max-width: 720px;
