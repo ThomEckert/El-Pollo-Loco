@@ -81,6 +81,7 @@ class Character extends MovableObject {
     this.bottle_sound,
     this.sleep_sound,
   ];
+  playSound = false;
 
   /**
    * Constructor for initializing an object with various states' images, applying gravity, and starting animation.
@@ -159,7 +160,9 @@ class Character extends MovableObject {
    *
    */
   moveCharacter() {
+    if (this.playSound) {
     this.walking_sound.pause();
+  }
     this.endOfTheWorld();
     this.onlyFlyingIsMoreBeautiful();
     this.willLetTheWorldBurn();
@@ -181,13 +184,13 @@ class Character extends MovableObject {
   endOfTheWorld() {
     if (this.world.keyboard.RIGHT && this.x < this.world.level.level_end_x) {
       this.moveRight();
-      this.walking_sound.play();
+      this.walking_sound.play().then(() => this.playSound = true);
       this.lastAnimationChangeTime = new Date().getTime();
     }
     if (this.world.keyboard.LEFT && this.x > 0) {
       this.moveLeft();
       this.otherDirection = true;
-      this.walking_sound.play();
+      this.walking_sound.play().then(() => this.playSound = true);
       this.lastAnimationChangeTime = new Date().getTime();
     }
   }
