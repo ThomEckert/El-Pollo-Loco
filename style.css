@@ -119,7 +119,7 @@ canvas {
 }
 .play_buttons_div {
     max-width: 720px;
-    max-height: 70px;
+    max-height: 90px;
     display: flex;
     height: 100%;
     width: 100%;
@@ -133,7 +133,6 @@ canvas {
 }
 .panel {
     margin: 0px 10px;
-    width: 20%;
     display: flex;
     justify-content: space-between;
     border-radius: 50%;
@@ -141,6 +140,7 @@ canvas {
 .panel img {
     height: 50px;
     border-radius: 50%;
+    padding: 20px;
 }
 .panel img:hover {
     background-color: rgba(240, 206, 56, 0.5);
