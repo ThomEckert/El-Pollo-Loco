@@ -119,7 +119,7 @@ canvas {
 }
 .play_buttons_div {
     max-width: 720px;
-    max-height: 90px;
+    max-height: 70px;
     display: flex;
     height: 100%;
     width: 100%;
@@ -131,8 +131,14 @@ canvas {
 .margin_twenty {
     margin: 20px;
 }
-.panel img {
+.panel {
     margin: 0px 10px;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50%;
+}
+.panel img {
     height: 50px;
     border-radius: 50%;
 }

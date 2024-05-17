@@ -70,26 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
    * @return {void}
    */
   function handleTouch(event, key) {
-    event.preventDefault();
     if (event.type === "touchstart") {
       keyboard[key] = true;
     } else if (event.type === "touchend") {
       keyboard[key] = false;
-    }
+    };
+    event.preventDefault();
   }
 
   btnThrow.addEventListener("touchstart", (event) => handleTouch(event, "D"));
   btnThrow.addEventListener("touchend", (event) => handleTouch(event, "D"));
-  btnJump.addEventListener("touchstart", (event) =>
-    handleTouch(event, "SPACE")
-  );
+  btnJump.addEventListener("touchstart", (event) => handleTouch(event, "SPACE"));
   btnJump.addEventListener("touchend", (event) => handleTouch(event, "SPACE"));
   btnLeft.addEventListener("touchstart", (event) => handleTouch(event, "LEFT"));
   btnLeft.addEventListener("touchend", (event) => handleTouch(event, "LEFT"));
   btnRight.addEventListener("touchend", (event) => handleTouch(event, "RIGHT"));
-  btnRight.addEventListener("touchstart", (event) =>
-    handleTouch(event, "RIGHT")
-  );
+  btnRight.addEventListener("touchstart", (event) => handleTouch(event, "RIGHT"));
 });
 
 /**

@@ -1,4 +1,8 @@
 let level1;
+
+/**
+ * Initialize the level by creating instances of various game objects including chickens, little chickens, endboss, cloud, background objects, coins, and bottles.
+ */
 function initlevel() {
   level1 = new Level(
     [
