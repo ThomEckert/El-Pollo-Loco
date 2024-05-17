@@ -75,7 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (event.type === "touchend") {
       keyboard[key] = false;
     };
-    event.preventDefault();
+    if (event.cancelable) event.preventDefault();
+    
   }
 
   btnThrow.addEventListener("touchstart", (event) => handleTouch(event, "D"));
