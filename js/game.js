@@ -248,10 +248,10 @@ document.addEventListener("DOMContentLoaded", function () {
   button.addEventListener("click", function () {
     isActive = !isActive;
     if (isActive) {
-      button.src = "./icons/no_sound.png";
+      button.src = "./icon/no_sound.png";
       world.mute();
     } else {
-      button.src = "./icons/sound.png";
+      button.src = "./icon/sound.png";
       world.unmute();
     }
   });
