@@ -88,6 +88,7 @@ class Endboss extends MovableObject {
       this.playAnimation(this.IMAGES_HURT);
       this.speed = 15;
       this.moveLeft();
+      this.endboss_hurt_sound.volume = 0.3;
       this.endboss_hurt_sound.play();
     } else if (this.x - world.character.x <= 500) {
       this.playAnimation(this.IMAGES_WALKING);

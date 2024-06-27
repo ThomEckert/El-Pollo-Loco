@@ -112,6 +112,7 @@ class World {
   youWin() {
     this.end_sound.pause();
     this.play_sound.pause();
+    this.win_sound.volume = 0.3;
     this.win_sound.play();
     stopGame();
     this.showYouWin();
@@ -139,6 +140,7 @@ class World {
   youLose() {
     this.end_sound.pause();
     this.play_sound.pause();
+    this.lost_sound.volume = 0.3;
     this.lost_sound.play();
     stopGame();
     this.showYouLose();
@@ -270,6 +272,7 @@ class World {
         this.character.hit();
         this.healthBar.setPercentage(this.character.energy);
         this.character.moveLeftHurt();
+        this.hit_sound.volume = 0.3;
         this.hit_sound.play();
         this.character.jump();
       }
@@ -301,6 +304,7 @@ class World {
         this.coinBar.amount++;
         this.coinBar.setAmount();
         this.level.coins.splice(this.level.coins.indexOf(coin), 1);
+        this.coin_sound.volume = 0.3;
         this.coin_sound.play();
       }
     });
@@ -316,6 +320,7 @@ class World {
         this.bottleBar.amount++;
         this.bottleBar.setAmount();
         this.level.bottles.splice(this.level.bottles.indexOf(bottle), 1);
+        this.bottle_sound.volume = 0.3;
         this.bottle_sound.play();
       }
     });

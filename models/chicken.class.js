@@ -35,6 +35,7 @@ class Chicken extends MovableObject {
    */
   killChickn() {
     super.killChickn();
+    this.splash_sound.volume = 0.3;
     this.splash_sound.play();
   }
 

@@ -135,6 +135,7 @@ class Character extends MovableObject {
   playCharacter() {
     if (this.isDead()) {
       this.playAnimation(this.IMAGES_DEAD);
+      this.dead_sound.volume = 0.3;
       this.dead_sound.play();
       this.characterIsDead = true;
     } else if (this.isHurt()) {
@@ -149,6 +150,7 @@ class Character extends MovableObject {
           this.playAnimation(this.IMAGES_IDLE);
         } else {
           this.playAnimation(this.IMAGES_LONG_IDLE);
+          this.sleep_sound.volume = 0.3;
           this.sleep_sound.play();
         }
       }
@@ -184,12 +186,14 @@ class Character extends MovableObject {
   endOfTheWorld() {
     if (this.world.keyboard.RIGHT && this.x < this.world.level.level_end_x) {
       this.moveRight();
+      this.walking_sound.volume = 0.3;
       this.walking_sound.play().then(() => (this.playSound = true));
       this.lastAnimationChangeTime = new Date().getTime();
     }
     if (this.world.keyboard.LEFT && this.x > 0) {
       this.moveLeft();
       this.otherDirection = true;
+      this.walking_sound.volume = 0.3;
       this.walking_sound.play().then(() => (this.playSound = true));
       this.lastAnimationChangeTime = new Date().getTime();
     }
@@ -202,6 +206,7 @@ class Character extends MovableObject {
   onlyFlyingIsMoreBeautiful() {
     if (this.world.keyboard.SPACE && !this.isAboveGround()) {
       this.jump();
+      this.jump_sound.volume = 0.3;
       this.jump_sound.play();
       this.lastAnimationChangeTime = new Date().getTime();
     }
